@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import Form from "./components/Form";
+import { useState } from "react";
+import GoalList from "./components/GoalList";
 
 function App() {
+  const [goal, setGoal] = useState('');
+  const [goalList, setGoalList] = useState([]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header></Header>
+      <Form goal={goal} setGoal={setGoal} goalList={goalList} setGoalList={setGoalList} />
+      <GoalList goalList={goalList} setGoalList={setGoalList}/>
     </div>
   );
 }
