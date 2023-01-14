@@ -1,7 +1,7 @@
 body{
     margin: 0;
     font-family: sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .header{
     background-color: royalblue;
